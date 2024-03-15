@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import React from 'react'
 import { useState } from 'react';
 import './App.css';
 import Greet,{Welcome} from './FunctionalComponents'
@@ -20,12 +21,26 @@ import NewLift from './Lift';
 import NewForm from './Forms';
 import UncontrolForm from './UncontrolledForms';
 import LazyComponent from './CodeSplitting';
+import UserInput from './ForwardingRef/ParentInput';
+import NewFragment from './Fragments';
+import ClickCount from './HOC/ClickCount';
+import Context from './Context/Context';
+import ErrorBoundary from './ErrorBoundary';
+import ErrorOccur from './ErrorOccur';
+import BluePicker from './JsxDotnotation';
+import { NewPortal } from './Portal';
+import CreateElement from './withoutJsx';
 const customer= {
   name: "Rithika",
   url:"https://i.imgur.com/yXOvdOSs.jpg",
   imageSize: 90
 
 };
+// React.createElement(
+//   MyButton,
+//   {color:'blue'},
+//   'Click here'
+// )
 
 export default function App() {
   
@@ -64,7 +79,19 @@ export default function App() {
     {/* <NewForm/> */}
     {/* <UncontrolForm/> */}
 
-    <LazyComponent/>
+    {/* <LazyComponent/> */}
+    {/* <UserInput/> */}
+
+    {/* <NewFragment/> */}
+    {/* <ClickCount name='Rithika'/> */}
+    {/* <Context/> */}
+    {/* <ErrorBoundary>
+      <ErrorOccur/>
+    </ErrorBoundary> */}
+    {/* <BluePicker/> */}
+    {/* {<NewPortal/>} */}
+    <CreateElement/>
+    
     </div>
   );
 }
