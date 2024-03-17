@@ -30,6 +30,9 @@ import ErrorOccur from './ErrorOccur';
 import BluePicker from './JsxDotnotation';
 import { NewPortal } from './Portal';
 import CreateElement from './withoutJsx';
+import NewRef from './ref';
+import NewState, { FirstRef } from './refandstate';
+import StateHook, { ArrayState, ObjectState, PreviousState } from './hooks/useState';
 const customer= {
   name: "Rithika",
   url:"https://i.imgur.com/yXOvdOSs.jpg",
@@ -90,8 +93,14 @@ export default function App() {
     </ErrorBoundary> */}
     {/* <BluePicker/> */}
     {/* {<NewPortal/>} */}
-    <CreateElement/>
-    
+    {/* <CreateElement/> */}
+    {/* <NewRef/> */}
+    {/* <NewState/>
+    <FirstRef/> */}
+    {/* <StateHook/> */}
+    {/* <PreviousState/> */}
+    {/* <ObjectState/> */}
+    <ArrayState/>
     </div>
   );
 }
