@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 function Panel({ title,children,isActive}) {
-//   const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(false);
   return (
     <div>
       <h3>{title}</h3>

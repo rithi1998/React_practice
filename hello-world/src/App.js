@@ -33,6 +33,11 @@ import CreateElement from './withoutJsx';
 import NewRef from './ref';
 import NewState, { FirstRef } from './refandstate';
 import StateHook, { ArrayState, ObjectState, PreviousState } from './hooks/useState';
+import Age from './hooks/useReducer';
+import IncrementAge from './hooks/useReducer';
+import ContextHook from './hooks/useContext';
+import RefHook from './hooks/useRef';
+import EffectHook from './hooks/useEffect';
 const customer= {
   name: "Rithika",
   url:"https://i.imgur.com/yXOvdOSs.jpg",
@@ -100,7 +105,12 @@ export default function App() {
     {/* <StateHook/> */}
     {/* <PreviousState/> */}
     {/* <ObjectState/> */}
-    <ArrayState/>
+    {/* <ArrayState/> */}
+    {/* <Age/> */}
+    {/* <IncrementAge/> */}
+    {/* <ContextHook/> */}
+    {/* <RefHook/> */}
+    <EffectHook/>
     </div>
   );
 }
