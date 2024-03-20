@@ -3,7 +3,7 @@ import React,{useRef} from 'react'
 export default function RefHook(){
     let firstRef=useRef(0);
     function handleClick(){
-        firstRef.current=firstRef.current+1
+        firstRef.current=firstRef.current+1;
     }
     return(
         <>

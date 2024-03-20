@@ -21,23 +21,28 @@ import NewLift from './Lift';
 import NewForm from './Forms';
 import UncontrolForm from './UncontrolledForms';
 import LazyComponent from './CodeSplitting';
-import UserInput from './ForwardingRef/ParentInput';
+import UserInput from './ForwardingRef/parentinput';
 import NewFragment from './Fragments';
 import ClickCount from './HOC/ClickCount';
 import Context from './Context/Context';
 import ErrorBoundary from './ErrorBoundary';
 import ErrorOccur from './ErrorOccur';
-import BluePicker from './JsxDotnotation';
-import { NewPortal } from './Portal';
+import BluePicker from './jsxindepth';
+import { NewPortal } from './portal';
 import CreateElement from './withoutJsx';
 import NewRef from './ref';
 import NewState, { FirstRef } from './refandstate';
-import StateHook, { ArrayState, ObjectState, PreviousState } from './hooks/useState';
-import Age from './hooks/useReducer';
-import IncrementAge from './hooks/useReducer';
-import ContextHook from './hooks/useContext';
-import RefHook from './hooks/useRef';
-import EffectHook from './hooks/useEffect';
+import StateHook, { ArrayState, ObjectState, PreviousState } from './hooks/usestate';
+import Age from './hooks/usereducer';
+import IncrementAge from './hooks/usereducer';
+import ContextHook from './hooks/usecontext';
+import RefHook from './hooks/useref';
+import EffectHook from './hooks/useeffect';
+import FilterItems from './hooks/usememo';
+import UseUser from './hooks/usedebugvalue';
+import MemoHook from './hooks/usememo';
+import CallbackHook from './hooks/usecallback/usecallback';
+import SyncExternalStoreHook from './hooks/usesyncextrenalstore.jsx/usesyncexternalstore';
 const customer= {
   name: "Rithika",
   url:"https://i.imgur.com/yXOvdOSs.jpg",
@@ -110,9 +115,14 @@ export default function App() {
     {/* <IncrementAge/> */}
     {/* <ContextHook/> */}
     {/* <RefHook/> */}
-    <EffectHook/>
+    {/* <EffectHook/> */}
+    {/* <FilterItems/> */}
+    {/* <UseUser/> */}
+    {/* <MemoHook/> */}
+    {/* <CallbackHook/> */}
+    <SyncExternalStoreHook/>
     </div>
   );
 }
 
-;
+

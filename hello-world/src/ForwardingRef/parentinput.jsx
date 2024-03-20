@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import NewInput from './ChildInput';
+import NewInput from './childinput';
 
 export default class UserInput extends Component{
     constructor(props){

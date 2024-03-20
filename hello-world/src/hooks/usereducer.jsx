@@ -1,27 +1,5 @@
 import React,{useReducer} from 'react'
 
-// function reducer(state,action){
-//     if(action.type==='incremented_age'){
-//         return{
-//             age: state.age+1
-//         };
-//     }
-//     throw Error('Unknown action');
-// }
-
-// export default function Age(){
-//     const[state,dispatch]=useReducer(reducer,{age:28})
-//     return(
-//         <>
-//         <button onClick={()=>{
-//             dispatch({type:'incremented_age'})
-//         }}>
-//             Increment age
-//         </button>
-//         <p>Your age is {state.age}</p>
-//         </>
-//     )
-// }
 
 
 function reducer(state,action){
