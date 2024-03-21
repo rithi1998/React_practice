@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import React from 'react'
+import React, { Profiler } from 'react'
 import { useState } from 'react';
 import './App.css';
 import Greet,{Welcome} from './FunctionalComponents'
@@ -14,14 +14,14 @@ import NewClass,{NewFunction} from './State';
 import NewProp,{Detail} from './Props';
 import DidUpdate from './Updating';
 import Example from './Mounting';
-import NewApp from './bind';
+import NewApp from './Bind';
 import Parent from './LiftStateUp';
-import FirstBind from './bind';
+import FirstBind from './Bind';
 import NewLift from './Lift';
 import NewForm from './Forms';
 import UncontrolForm from './UncontrolledForms';
 import LazyComponent from './CodeSplitting';
-import UserInput from './ForwardingRef/parentinput';
+import UserInput from './ForwardingRef/ParentInput';
 import NewFragment from './Fragments';
 import ClickCount from './HOC/ClickCount';
 import Context from './Context/Context';
@@ -32,17 +32,22 @@ import { NewPortal } from './portal';
 import CreateElement from './withoutJsx';
 import NewRef from './ref';
 import NewState, { FirstRef } from './refandstate';
-import StateHook, { ArrayState, ObjectState, PreviousState } from './hooks/usestate';
-import Age from './hooks/usereducer';
-import IncrementAge from './hooks/usereducer';
-import ContextHook from './hooks/usecontext';
-import RefHook from './hooks/useref';
-import EffectHook from './hooks/useeffect';
-import FilterItems from './hooks/usememo';
-import UseUser from './hooks/usedebugvalue';
-import MemoHook from './hooks/usememo';
-import CallbackHook from './hooks/usecallback/usecallback';
-import SyncExternalStoreHook from './hooks/usesyncextrenalstore.jsx/usesyncexternalstore';
+import StateHook, { ArrayState, ObjectState, PreviousState } from './hooks/UseState';
+import Age from './hooks/UseReducer';
+import IncrementAge from './hooks/UseReducer';
+import ContextHook from './hooks/UseContext';
+import RefHook from './hooks/UseRef';
+import EffectHook, { EffectHookOne } from './hooks/UseEffect/UseEffect';
+import FilterItems from './hooks/UseMemo';
+import UseUser from './hooks/UseDebugValue';
+import MemoHook from './hooks/UseMemo';
+import CallbackHook from './hooks/UseCallback/UseCallback';
+import SyncExternalStoreHook from './hooks/UseSyncExternalStore.jsx/UseSyncExternalStore';
+import TransitionHook from './hooks/UseTransition/UseTransition';
+import IdHook from './hooks/UseId';
+import Profile from './Profiler/Profiler';
+import PropTypeOne from './proptypes';
+
 const customer= {
   name: "Rithika",
   url:"https://i.imgur.com/yXOvdOSs.jpg",
@@ -103,6 +108,8 @@ export default function App() {
     </ErrorBoundary> */}
     {/* <BluePicker/> */}
     {/* {<NewPortal/>} */}
+    {/* <Profile/> */}
+    <PropTypeOne name='Rithika'/>
     {/* <CreateElement/> */}
     {/* <NewRef/> */}
     {/* <NewState/>
@@ -120,7 +127,11 @@ export default function App() {
     {/* <UseUser/> */}
     {/* <MemoHook/> */}
     {/* <CallbackHook/> */}
-    <SyncExternalStoreHook/>
+    {/* <SyncExternalStoreHook/> */}
+    {/* <TransitionHook/> */}
+    {/* <IdHook/> */}
+    {/* <EffectHookOne/> */}
+
     </div>
   );
 }

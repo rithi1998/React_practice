@@ -4,23 +4,26 @@ const ThemeContext=createContext(null);
 
 export default function ContextHook(){
     const[theme,setTheme]=useState('light');
+
+    const toggleTheme=()=>{
+        console.log("Function calling")
+        setTheme(prevTheme=>(prevTheme==='light'?'dark':'light'));
+    }
     return(
-        <ThemeContext.Provider value={theme}>
+        <ThemeContext.Provider value={{theme,toggleTheme}}>
             <Form/>
             <label>
                 <input type="checkbox"
                 checked={theme==='dark'}
-                onChange={(e)=>{
-                    setTheme(e.target.checked?'dark':'light')
-        }}/> 
+                onChange={toggleTheme}/> 
 
         Use dark mode       
             </label>
         </ThemeContext.Provider>
-    )
+    );
 }
 
-function Form({children}){
+function Form(){
     return(
         <Panel title="Welcome">
             <Button>Sign up</Button>
@@ -31,7 +34,7 @@ function Form({children}){
 }
 
 function Panel({title,children}){
-    const theme=useContext(ThemeContext);
+    const {theme}=useContext(ThemeContext);
     const className='panel-'+theme;
     return(
         <section className={className}>
@@ -40,12 +43,12 @@ function Panel({title,children}){
             </h1>
             {children}
         </section>
-    )
+    );
 }
 
 function Button({children}){
-    const theme=useContext(ThemeContext);
-    const className='button-'+theme;
+    const {theme}=useContext(ThemeContext);
+    const className='button-'+theme;//dynamically generate classname based on theme
     return(
         <button className={className}>
             {children}
