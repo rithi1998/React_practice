@@ -1,4 +1,4 @@
-import React,{Component} from 'react'
+import React,{Component} from 'react';
 
 export default class UncontrolForm extends Component{
     constructor(){
@@ -22,6 +22,6 @@ export default class UncontrolForm extends Component{
                 <br/><br/>
                 <input type="submit" value="Submit" />
             </form>
-        )
+        );
     }
 }

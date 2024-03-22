@@ -1,60 +1,60 @@
-import React from 'react'
+import React from 'react';
 
 function List() {
-    let items = ["Apple", "Mango", "Orange"]
+    let items = ['Apple', 'Mango', 'Orange'];
     let detail=[
-        {id:1,name:"Rithika"},
-        {id:2,name:"Raj"},
-        {id:3,name:"Varshini"},
-        {id:4,name:"Nila"}
-    ]
+        {id:1,name:'Rithika'},
+        {id:2,name:'Raj'},
+        {id:3,name:'Varshini'},
+        {id:4,name:'Nila'}
+    ];
 
-    // let student = [
-    //     {
-    //         name: "Rithika",
-    //         details: [
-    //             { city: "Namakkal" },
-    //             { state: "TamilNadu" }
+    let student = [
+        {
+            name: 'Rithika',
+            details: [
+                { city: 'Namakkal'},
+                { state: 'TamilNadu'}
 
-    //         ]
-    //     },
-    //     {
-    //         name: "Divya",
-    //         details: [
-    //             { city: "Nagpur" },
-    //             { state: "Uttarkhand" }
+            ]
+        },
+        {
+            name: 'Divya',
+            details: [
+                { city: 'Nagpur'},
+                { state: 'Uttarkhand'}
 
-    //         ]
-    //     }
-    // ];
+            ]
+        }
+    ];
 
-    // const person={
-    //     name:"Rithika",
-    //     email:"rithi@gmail.com"
-    // }
+    const person={
+        name:'Rithika',
+        email:'rithi@gmail.com'
+    };
     return (
         <div>
             <h1>List of fruits</h1>
             <ul>
                 {
-                    items.map((item) => 
-                    (<li>{item}</li>)
+                    items.map((item,index) => 
+                        (<li key={index}>{item}</li>)
                     
                     )
                 }
 
             </ul>
 
-            {/* <ul>
+            <ul>
                 {
                     detail.map((data,index)=>(
                         <li key={index}>{data.name}</li>
 
                     ))
                 }
-            </ul>  */}
+            </ul> 
 
-            {/* <div>
+            <div>
                 {
                     student.map((data, index) => (
                         <div key={index}>
@@ -77,14 +77,15 @@ function List() {
 
             <div>
                 {Object.keys(person).map(key =>(
-                    <p>{person[key]}</p>
+                    <p key={key}>{person[key]}</p>
                 ))}
-            </div> */}
+            </div>
 
 
 
         </div>
-    )
+    );
 }
 
 export { List };
+

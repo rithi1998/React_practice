@@ -1,4 +1,4 @@
-import React,{Component} from 'react'
+import React,{Component} from 'react';
 
 export default class NewRef extends Component{
     constructor(props){
@@ -15,7 +15,7 @@ export default class NewRef extends Component{
                 <input type="text" ref={this.myref}/><br/><br/>
                 <input type="button" value="Click me" onClick={this.handleClick} />
             </div>
-        )
+        );
     }
 }
 

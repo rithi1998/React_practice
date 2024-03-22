@@ -1,4 +1,4 @@
-import React,{useState,useRef}from 'react'
+import React,{useState,useRef}from 'react';
 
 export default function NewState(){
     const[count,setCount]=useState(0);
@@ -8,15 +8,15 @@ export default function NewState(){
     return(
         <button onClick={handleClick}>Clicked {count} times</button>
 
-    )
+    );
 }
 
 export function FirstRef(){
     const newRef=useRef(0);
     function clickHandle(){
-        newRef.current=newRef.current+1
+        newRef.current=newRef.current+1;
     }
     return(
         <button onClick={clickHandle}>You clicked {newRef.current} times</button>
-    )
+    );
 }

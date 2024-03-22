@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 
 const NewInput=React.forwardRef((props,ref)=>{
@@ -6,7 +6,9 @@ const NewInput=React.forwardRef((props,ref)=>{
         <div>
             <input type="text" ref={ref}></input>
         </div>
-    )
-})
+    );
+});
 
-export default NewInput
+NewInput.displayName='NewInput';
+
+export default NewInput;

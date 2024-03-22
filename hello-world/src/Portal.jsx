@@ -1,12 +1,12 @@
-import React,{Component} from 'react'
-import ReactDOM from 'react-dom'
+import React,{Component} from 'react';
+import ReactDOM from 'react-dom';
 
 export default class CreatePortal extends Component{
     render(){
         return ReactDOM.createPortal(
             <button onClick={this.HandleClick}>Click me</button>,
             document.getElementById('root-portal')
-        )
+        );
 
     }
     
@@ -17,8 +17,8 @@ export class NewPortal extends Component{
         super(props);
         this.state={
             count:0
-        }
-        this.HandleClick=this.HandleClick.bind(this)
+        };
+        this.HandleClick=this.HandleClick.bind(this);
     }
     HandleClick(){
         this.setState(prevState =>(
@@ -28,13 +28,13 @@ export class NewPortal extends Component{
     render(){
         return(
             <div onClick={this.HandleClick}
-            style={{marginLeft:'10px'}}>
+                style={{marginLeft:'10px'}}>
                 <p>
                     Clicked {this.state.count}times
                 </p>
                 <CreatePortal/>
             </div>
-        )
+        );
     }
 
 }

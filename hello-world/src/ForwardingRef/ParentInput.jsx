@@ -1,14 +1,14 @@
-import React,{Component} from 'react'
-import NewInput from './childinput';
+import React,{Component} from 'react';
+import NewInput from './ChildInput';
 
 export default class UserInput extends Component{
     constructor(props){
         super(props);
-        this.inputRef=React.createRef()
+        this.inputRef=React.createRef();
     }
 
     ClickHandle(){
-        this.inputRef.current.focus()
+        this.inputRef.current.focus();
     }
 
     render(){
@@ -17,7 +17,7 @@ export default class UserInput extends Component{
                 <NewInput ref={this.inputRef}/>
                 <button onClick={()=>this.ClickHandle()}>Click here</button>
             </div>
-        )
+        );
     }
 
 }

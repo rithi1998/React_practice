@@ -1,82 +1,82 @@
-import React,{Component} from 'react'
-import useRef from 'react'
+import React,{Component} from 'react';
+import useRef from 'react';
 
-// export default function Hello(){
-//     function greet(){
-//         console.log("How are you");
-//     }
+export function Hello(){
+    function greet(){
+        console.log('How are you');
+    }
 
-//     let myFunction=()=>{
-//         console.log("Welcome to the world");
-//     }
+    let myFunction=()=>{
+        console.log('Welcome to the world');
+    };
 
-//     return(
-//         <div>
-//     <button onClick={greet}> Click here</button>
-//     <button onClick={myFunction}>Save here </button>
-//     </div>
+    return(
+        <div>
+            <button onClick={greet}> Click here</button>
+            <button onClick={myFunction}>Save here </button>
+        </div>
     
-//     )
-// }
+    );
+}
 
-// export default function NewEvent(customer){
-//     return(
-//         <img
-//           src= {customer.url}
-//           alt={'Photo of '+customer.name}
-//           className="pogo"
-//           style={{
-//             width: customer.imageSize,
-//             height: customer.imagesize
-//           }}
+export function NewEvent(customer){
+    return(
+        <img
+            src= {customer.url}
+            alt={'Photo of '+customer.name}
+            className="pogo"
+            style={{
+                width: customer.imageSize,
+                height: customer.imagesize
+            }}
 
-//         />
-//     )
+        />
+    );
 
-// }
+}
 
-// export default class FirstEvent extends Component{
-//     constructor(props){
-//         super(props);
-//         this.state={count:0};
-//     }
+export class FirstEvent extends Component{
+    constructor(props){
+        super(props);
+        this.state={count:0};
+    }
 
-//     firstClick= () => {
-//         this.setState({
-//             count:this.state.count + 1
-//         },function(){
-//             console.log("Event finished")
-//         });
+    firstClick= () => {
+        this.setState({
+            count:this.state.count + 1
+        },function(){
+            console.log('Event finished');
+        });
         
-//     }
+    };
 
-//     render(){
-//         return(
-//             <>
-//             <div>
-//             Button presses:{this.state.count}</div>
-//             <button onClick={this.firstClick}> Click me</button>          
-//             </>
-//         )
-//     }
-// }
+    render(){
+        return(
+            <>
+                <div>
+                Button presses:{this.state.count}</div>
+                <button onClick={this.firstClick}> Click me</button>          
+            </>
+        );
+    }
+}
 
 
 
-// export default function NewClick(){
+export function NewClick(){
 
-//     const inputRef=useRef(null);
-//     function handleClick(){
-//         inputRef.current.focus();
-//     }
+    const inputRef=useRef(null);
+    function handleClick(){
+        inputRef.current.focus();
+    }
 
-//     return(
-//         <>
-//         <input ref={inputRef}/>
-//         <button onClick={handleClick}>Click here</button>
-//         </>
-//     );
-// }
+    return(
+        <>
+            <input ref={inputRef}/>
+            <button onClick={handleClick}>Click here</button>
+        </>
+    );
+}
 
 
 export default function MouseEvents(){
@@ -84,21 +84,21 @@ export default function MouseEvents(){
     //     console.log("Mouse clicked")
     // }
     function EnterEvent(){
-        console.log("Mouse entered")
+        console.log('Mouse entered');
     }
     return(
         <div>
             <h1>Events</h1>
 
-        <button 
-        onClick={()=>console.log("Mouse Clicked")}
-        onMouseEnter={EnterEvent}
-        onMouseLeave={e=>console.log("Mouse Leave")}
-        >
+            <button 
+                onClick={()=>console.log('Mouse Clicked')}
+                onMouseEnter={EnterEvent}
+                onMouseLeave={()=>console.log('Mouse Leave')}
+            >
         
-        Click me
-        </button>
+            Click me
+            </button>
             
         </div>
-    )
+    );
 }

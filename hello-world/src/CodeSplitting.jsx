@@ -1,17 +1,17 @@
-import React, { lazy, Suspense, useState } from 'react'
+import React, { lazy, Suspense, useState } from 'react';
 
 
-const Update = lazy(() => import('./Update'))
-const New = lazy(() => import('./New'))
+const Update = lazy(() => import('./Update'));
+const New = lazy(() => import('./New'));
 
 export default function LazyComponent() {
-    const [Tab, selectTab] = useState('')
+    const [Tab, selectTab] = useState('');
     return (
         <div>
             
-                <button onClick={() => selectTab('Update')}> Update</button>
-                <br /><br />
-                <button onClick={() => selectTab('New')}> New</button>
+            <button onClick={() => selectTab('Update')}> Update</button>
+            <br /><br />
+            <button onClick={() => selectTab('New')}> New</button>
             
             <Suspense fallback={<div>Loading...</div>}>
                 {Tab === 'Update' && <Update />}
@@ -20,5 +20,5 @@ export default function LazyComponent() {
 
             </Suspense>
         </div>
-    )
+    );
 }

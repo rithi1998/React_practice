@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
-import Button from "./button";
-import Age from "./age";
+import Button from "./Button";
+import Age from "./Age";
  
 export default function CallbackHook() {
   const [count, setCount] = useState(0);

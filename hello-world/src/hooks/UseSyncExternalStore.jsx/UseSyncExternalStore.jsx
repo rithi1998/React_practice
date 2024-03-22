@@ -1,5 +1,5 @@
 import {useSyncExternalStore} from 'react'
-import countSet from './count'
+import countSet from './Count'
 
 export default function SyncExternalStoreHook(){
     const count=useSyncExternalStore(countSet.subscribe,countSet.read)

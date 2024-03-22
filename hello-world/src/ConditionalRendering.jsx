@@ -1,7 +1,7 @@
-import React,{useState} from 'react'
+import React,{useState} from 'react';
 
 export default function Render(){
-    const [name,setName]=useState(null)
+    const [name,setName]=useState(null);
     return(
         <div>
             {
@@ -10,5 +10,5 @@ export default function Render(){
             <button onClick={()=>setName('Rithika')}>Change</button>
 
         </div>
-    )
+    );
 }

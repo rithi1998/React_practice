@@ -4,7 +4,7 @@ import { Component } from 'react'
 
 export default function NewProp(props){
     console.log(props)
-    let [name,setName]=useState("Raj")
+    let [name,setName]=useState('Raj')
     return(
         <>
         <div>
@@ -13,7 +13,7 @@ export default function NewProp(props){
             <h3>Address:{props.details.address}</h3>
             <h3>Mobile:{props.details.mobile}</h3>
         </div>
-    <button onClick={()=>{setName("Sidhu")}}>Update details</button>
+    <button onClick={()=>{setName('Sidhu')}}>Update details</button>
         </>
     )
 }

@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import { Component } from 'react';
 export default class FirstBind extends Component{
     constructor(){
         super();
-        this.HandleClick=this.HandleClick.bind(this)
+        this.HandleClick=this.HandleClick.bind(this);
 
     }
     HandleClick(){
@@ -13,8 +13,8 @@ export default class FirstBind extends Component{
     render(){
         return(
             <>
-            <button onClick={this.HandleClick}>Click here</button>
+                <button data-testid="Rithi" onClick={this.HandleClick}>Click here</button>
             </>
-        )
+        );
     }
 }

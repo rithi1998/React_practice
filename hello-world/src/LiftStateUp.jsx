@@ -1,25 +1,25 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class Parent extends Component{
     constructor(){
         super();
         this.state={
             data:0
-        }
+        };
         
     }
     NewChange(item){
-        this.setState({data:item})
+        this.setState({data:item});
     }
     render(){
         return(
             <>
-             <h1>Lifting State up</h1>
-             <Child val={this.state.data} NewChange={this.NewChange.bind(this)}/>
-              <br/><br/>
-             <Child val={this.state.data} NewChange={this.NewChange.bind(this)}/>
+                <h1>Lifting State up</h1>
+                <Child val={this.state.data} NewChange={this.NewChange.bind(this)}/>
+                <br/><br/>
+                <Child val={this.state.data} NewChange={this.NewChange.bind(this)}/>
             </>
-        )
+        );
     }
 }
 

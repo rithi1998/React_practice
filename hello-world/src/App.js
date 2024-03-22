@@ -27,11 +27,11 @@ import ClickCount from './HOC/ClickCount';
 import Context from './Context/Context';
 import ErrorBoundary from './ErrorBoundary';
 import ErrorOccur from './ErrorOccur';
-import BluePicker from './jsxindepth';
-import { NewPortal } from './portal';
-import CreateElement from './withoutJsx';
-import NewRef from './ref';
-import NewState, { FirstRef } from './refandstate';
+import BluePicker from './JsxInDepth';
+import { NewPortal } from './Portal';
+import CreateElement from './WithoutJsx';
+import NewRef from './Ref';
+import NewState, { FirstRef } from './RefAndState';
 import StateHook, { ArrayState, ObjectState, PreviousState } from './hooks/UseState';
 import Age from './hooks/UseReducer';
 import IncrementAge from './hooks/UseReducer';
@@ -46,7 +46,14 @@ import SyncExternalStoreHook from './hooks/UseSyncExternalStore.jsx/UseSyncExter
 import TransitionHook from './hooks/UseTransition/UseTransition';
 import IdHook from './hooks/UseId';
 import Profile from './Profiler/Profiler';
-import PropTypeOne from './proptypes';
+import PropTypeOne from './Proptypes';
+import Greeting from './WithoutES6';
+import LayoutEffecthook from './hooks/UseLayoutEffect';
+import InsertionEffectHook from './hooks/UseInsertionEffect';
+import ImperativehandleHook from './hooks/UseImperativeHandle';
+import FirstComponent from './hooks/CustomHooks/FirstComponent';
+import DeferredValuehook from './hooks/UseDeferredValue';
+import TestCounter from './Testing';
 
 const customer= {
   name: "Rithika",
@@ -82,16 +89,16 @@ export default function App() {
 
     {/* <NewClass/><hr/>
     <NewFunction/> */}
-    {/* <NewProp email="rithi@gmail.com"
-    details={{address:"Chennai",mobile:"85673858223"}}/> */}
+    <NewProp email="rithi@gmail.com"
+    details={{address:"Chennai",mobile:"85673858223"}}/>
     {/* <Detail name="Ragu"/> */}
     {/* <Login/> */}
     {/* <Example/> */}
-    {/* <DidUpdate/> */}
-    {/* <NewApp/> */}
+    {/* <DidUpdate/>
+     <NewApp/> */}
 
     {/* <Parent/> */}
-    {/* <FirstBind/> */}
+    <FirstBind/>
     {/* <NewLift/> */}
 
     {/* <NewForm/> */}
@@ -109,7 +116,8 @@ export default function App() {
     {/* <BluePicker/> */}
     {/* {<NewPortal/>} */}
     {/* <Profile/> */}
-    <PropTypeOne name='Rithika'/>
+    {/* <PropTypeOne name='Rithika'/> */}
+    {/* <Greeting name='Raj'/> */}
     {/* <CreateElement/> */}
     {/* <NewRef/> */}
     {/* <NewState/>
@@ -131,6 +139,15 @@ export default function App() {
     {/* <TransitionHook/> */}
     {/* <IdHook/> */}
     {/* <EffectHookOne/> */}
+    {/* <LayoutEffecthook/> */}
+    {/* <InsertionEffectHook/> */}
+    {/* <ImperativehandleHook/> */}
+
+    {/* <FirstComponent/> */}
+
+    {/* <DeferredValuehook/> */}
+
+    <TestCounter/>
 
     </div>
   );

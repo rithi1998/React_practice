@@ -1,6 +1,7 @@
+import React from 'react';
 const ErrorOccur=()=>{
     const NewError=()=>{
-        throw new Error("There are errors in this component")
+        throw new Error('There are errors in this component');
     };
     return(
         <div>

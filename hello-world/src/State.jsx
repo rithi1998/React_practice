@@ -1,13 +1,13 @@
-import React from "react";
-import {useState} from 'react'
-import { Component } from "react";
+import React from 'react';
+import {useState} from 'react';
+import { Component } from 'react';
 
 export default function NewClass(){
-    let [name,setName]=useState("Rithika");
+    let [name,setName]=useState('Rithika');
     function UpdateData(){
-       setName(name="Raj");
+        setName(name='Raj');
     }
-    console.warn("Clicked")
+    console.warn('Clicked');
     return(
         <div>
             <h1> {name}</h1>
@@ -23,12 +23,12 @@ export class NewFunction extends Component{
         super();
         this.state={
             name:0
-        }
+        };
     }
 
     UpdateName(){
-        this.setState({name:this.state.name+1})
-        console.warn('clicked')
+        this.setState({name:this.state.name+1});
+        console.warn('clicked');
     }
     render(){
         return(
@@ -37,7 +37,7 @@ export class NewFunction extends Component{
                 <button onClick={()=>this.UpdateName()}>Update name</button>
             </div>
 
-        )
+        );
     }
 
 }

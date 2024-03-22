@@ -1,8 +1,8 @@
 import { useState,useTransition } from "react";
-import TabButton from "./tabbutton";
-import AboutTab from "./about";
-import PostsTab from "./post";
-import Contact from "./contact";
+import TabButton from "./TabButton";
+import AboutTab from "./About";
+import PostsTab from "./Post";
+import Contact from "./Contact";
 
 export default function TransitionHook(){
     const[isPending,startTransition]=useTransition();

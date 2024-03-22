@@ -1,28 +1,25 @@
-import React,{Component}from 'react'
-
-
+import React,{Component}from 'react';
+import PropTypes from 'prop-types';
 export default class NewLift extends Component{
     constructor(){
         super();
         this.state={
-            name:"Rithika"
-        }
+            name:'Rithika'
+        };
     }
     
     HandleClick(){
-        this.setState({name:"Raj"})
+        this.setState({name:'Raj'});
     
     }
     render(){
         return(
             <>
-            <Define value={this.setState.name} HandleClick={this.HandleClick}></Define><br/><br/>
-            <Define value={this.setState.name} HandleClick={this.HandleClick}></Define>
+                <Define value={this.setState.name} HandleClick={this.HandleClick}></Define><br/><br/>
+                <Define value={this.setState.name} HandleClick={this.HandleClick}></Define>
             </>
-        )
+        );
     }
-
-
 }
 
 class Define extends Component{
@@ -33,8 +30,13 @@ class Define extends Component{
     render(){
         return(
             <>
-            <input val={this.props.value} onChange={this.props.HandleClick}/>
+                <input value={this.props.value} onChange={this.props.HandleClick}/>
             </>
-        )
+        );
     }
 }
+
+Define.propTypes={
+    HandleClick:PropTypes.func,
+    value:PropTypes.string
+};

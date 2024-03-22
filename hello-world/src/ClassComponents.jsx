@@ -1,10 +1,10 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
 class Define extends Component{
     render(){
         return(
             <h1> Welcome to the new world</h1>
 
-        )
+        );
             
         
     }
@@ -15,22 +15,22 @@ export default Define;
 export class NewComponent extends Component{
     constructor(props){
         super(props);
-        this.state={color:"lavendar"};
+        this.state={color:'lavendar'};
     }
 
     newfunction = ()=>{
-        this.setState=({color:"yellow"});
+        this.setState=({color:'yellow'});
 
-    }
+    };
     render(){
         
         return(
             
-                <button onclick={this.newfunction}>
-                    Click here
-                </button>
+            <button onClick={this.newfunction}>
+                Click here
+            </button>
             
-        )
+        );
 
     }
 }
@@ -38,15 +38,15 @@ export class NewComponent extends Component{
 export class LifeMethod extends Component{
     constructor(props){
         super(props);
-        this.state={favoritecolor:'blue'}
+        this.state={favoritecolor:'blue'};
     }
     // static getDerivedStateFromProps(props,state){
-    //     return {favoritecolor:props.favcol }
+    //     return {favoritecolor:props.favcol };
     // }
 
     componentDidMount(){
         setTimeout(()=>{
-            this.setState({favoritecolor:"Yellow"})
+            this.setState({favoritecolor:'Yellow'});
         },2000);
 
         
@@ -55,7 +55,7 @@ export class LifeMethod extends Component{
         return(
             <h3>Favorite color is {this.state.favoritecolor}</h3>
 
-        )
+        );
     }
 }
 
