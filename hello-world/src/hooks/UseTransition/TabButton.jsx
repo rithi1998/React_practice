@@ -1,8 +1,7 @@
-
-
+import React from 'react';
 export default function TabButton({isActive,children,onClick}){
     if(isActive){
-        return <b>{children}</b>
+        return <b>{children}</b>;
     }
 
     return(
@@ -10,5 +9,5 @@ export default function TabButton({isActive,children,onClick}){
             onClick();
         }}>{children}</button>
         
-    )
+    );
 }

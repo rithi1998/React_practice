@@ -1,4 +1,4 @@
-import { useImperativeHandle,useRef,forwardRef } from "react";
+import React,{ useImperativeHandle,useRef,forwardRef } from 'react';
 
 const MyInput=forwardRef(function MyInput(props,ref){
     const inputRef=useRef(null);
@@ -15,27 +15,27 @@ const MyInput=forwardRef(function MyInput(props,ref){
         };
     },[]);
 
-    return <input {...props} ref={inputRef}></input>
+    return <input {...props} ref={inputRef}></input>;
 });
 
 export {MyInput};
 
 
 export default function ImperativehandleHook() {
-  const ref = useRef(null);
+    const ref = useRef(null);
 
-  function handleClick() {
-    ref.current.focus();
+    function handleClick() {
+        ref.current.focus();
     // This won't work because the DOM node isn't exposed:
     // ref.current.style.opacity = 0.5;
-  }
+    }
 
-  return (
-    <form>
-      <MyInput placeholder="Enter your name" ref={ref} />
-      <button type="button" onClick={handleClick}>
-        Edit
-      </button>
-    </form>
-  );
+    return (
+        <form>
+            <MyInput placeholder="Enter your name" ref={ref} />
+            <button type="button" onClick={handleClick}>
+            Edit
+            </button>
+        </form>
+    );
 }

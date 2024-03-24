@@ -1,21 +1,21 @@
-import React,{useState,createContext,useContext} from 'react'
-
+import React,{useState,createContext,useContext} from 'react';
+import PropTypes from 'prop-types';
 const ThemeContext=createContext(null);
 
 export default function ContextHook(){
     const[theme,setTheme]=useState('light');
 
     const toggleTheme=()=>{
-        console.log("Function calling")
+        console.log('Function calling');
         setTheme(prevTheme=>(prevTheme==='light'?'dark':'light'));
-    }
+    };
     return(
         <ThemeContext.Provider value={{theme,toggleTheme}}>
             <Form/>
             <label>
                 <input type="checkbox"
-                checked={theme==='dark'}
-                onChange={toggleTheme}/> 
+                    checked={theme==='dark'}
+                    onChange={toggleTheme}/> 
 
         Use dark mode       
             </label>
@@ -46,6 +46,11 @@ function Panel({title,children}){
     );
 }
 
+Panel.propTypes={
+    title:PropTypes.string,
+    children:PropTypes.node
+};
+
 function Button({children}){
     const {theme}=useContext(ThemeContext);
     const className='button-'+theme;//dynamically generate classname based on theme
@@ -55,3 +60,7 @@ function Button({children}){
         </button>
     );
 }
+
+Button.propTypes={
+    children:PropTypes.node
+};

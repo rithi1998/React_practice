@@ -1,4 +1,4 @@
-import {useState,useEffect} from 'react'
+import {useState,useEffect} from 'react';
 
 export default function useCustomHook(initializer,componentName){
     const [counter,setCounter]=useState(initializer);
@@ -8,8 +8,8 @@ export default function useCustomHook(initializer,componentName){
     }
 
     useEffect(()=>{
-        console.log("The button of the "+ componentName + 
-        " is clicked " + counter + "times.");
+        console.log('The button of the '+ componentName + 
+        'is clicked' + counter + 'times.');
     },[counter,componentName]);
 
     return resetCounter;

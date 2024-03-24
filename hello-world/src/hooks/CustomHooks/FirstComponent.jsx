@@ -1,7 +1,8 @@
-import useCustomHook from "./CustomHooks";
+import React from 'react';
+import useCustomHook from './CustomHooks';
 
-export default function FirstComponent(props){
-    const clickedButton=useCustomHook(0,"FirstComponent");
+export default function FirstComponent(){
+    const clickedButton=useCustomHook(0,'FirstComponent');
     return(
         <div>
             <h1>

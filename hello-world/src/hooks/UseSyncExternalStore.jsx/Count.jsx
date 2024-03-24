@@ -21,6 +21,6 @@ const countSet={
         count--;
         subscribers.forEach((callback)=>callback());
     },
-}
+};
 
-export default countSet
+export default countSet;

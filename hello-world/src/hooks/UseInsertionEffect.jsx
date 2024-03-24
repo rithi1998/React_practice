@@ -1,19 +1,19 @@
-import {useEffect,useInsertionEffect,useLayoutEffect} from 'react'
+import React,{useEffect,useInsertionEffect,useLayoutEffect} from 'react';
 
 export default function InsertionEffectHook(){
     useInsertionEffect(()=>{
-        console.log("Insertion hook");
+        console.log('Insertion hook');
     },[]);
 
     useEffect(()=>{
-        console.log("Effect Hook");
+        console.log('Effect Hook');
     },[]);
 
     useLayoutEffect(()=>{
-        console.log("Layout Hook");
+        console.log('Layout Hook');
     },[]);
 
     console.log('Rendering');
 
-    return <div>Test</div>
+    return <div>Test</div>;
 }
