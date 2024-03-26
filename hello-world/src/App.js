@@ -60,8 +60,12 @@ import React from 'react';
 // import PersonList from './Axios/Getrequest';
 // import AddPerson from './Axios/PostRequest';
 // import PersonRemove from './Axios/DeleteRequest';
-import Routing from './Routing/ConfigureRoutes';
-
+// import Routing from './Routing/ConfigureRoutes';
+import SareeShop from './ReactRedux/SareeContainer';
+import { Provider } from 'react-redux';
+import store from './ReactRedux/Store';
+import HooksContainer from './ReactRedux/HooksContainer';
+import KurtiShop from './ReactRedux/KurtiContainer';
 
 // const customer= {
 //     name: "Rithika",
@@ -161,7 +165,15 @@ export default function App() {
             <PersonList/>
             <PersonRemove/> */}
 
-            <Routing/>
+            {/* <Routing/> */}
+            <Provider store={store}>
+                <HooksContainer/>
+                <SareeShop/>
+                <KurtiShop/>
+                
+                
+            </Provider>
+            
 
         </div>
     );

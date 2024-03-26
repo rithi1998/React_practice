@@ -1,0 +1,1 @@
+export const Buy_Saree='Buy_Saree';
