@@ -3,11 +3,12 @@ import { Component } from 'react';
 export default class FirstBind extends Component{
     constructor(){
         super();
-        this.HandleClick=this.HandleClick.bind(this);
+        // this.HandleClick=this.HandleClick.bind(this);
 
     }
     HandleClick(){
         console.log(this);
+        console.log('Rithika');
     }
 
     render(){

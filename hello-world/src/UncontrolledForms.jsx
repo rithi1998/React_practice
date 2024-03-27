@@ -1,8 +1,8 @@
 import React,{Component} from 'react';
 
 export default class UncontrolForm extends Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.input=React.createRef();
         this.SubmitEvent=this.SubmitEvent.bind(this);
     }
