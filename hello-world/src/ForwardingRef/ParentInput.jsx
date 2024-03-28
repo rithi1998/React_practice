@@ -7,16 +7,16 @@ export default class UserInput extends Component{
         this.inputRef=React.createRef();
     }
 
-    ClickHandle=()=>{
-        console.log('Button clicked');
+    ClickHandle(){
+        
         this.inputRef.current.focus();
-    };
+    }
 
     render(){
         return(
             <div>
                 <NewInput ref={this.inputRef}/>
-                <button onClick={this.ClickHandle()}>Click here</button>
+                <button onClick={()=>this.ClickHandle()}>Click here</button>
             </div>
         );
     }
