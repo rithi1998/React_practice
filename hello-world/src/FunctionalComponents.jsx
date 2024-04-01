@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
 // function Greet(){
 //     return <h1> Hello Rithika</h1>
@@ -10,7 +10,14 @@ export default Greet;
 
 
 export function Welcome(props) {
-    const name = 'Rajkumar';
+    //const name = 'Rajkumar';
+    const [name,setName]=useState(initial);
+    const handleName=()=>{
+        setName({name:'Raj'});
+    };
+
+    
+    
     return (
         <>
             <h1> Hello Raj</h1>
